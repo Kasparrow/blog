@@ -1,0 +1,142 @@
+@font-face 
+{
+	font-family: "DM Mono";
+	src: url("./DMMono-Light.ttf");
+}
+
+html, body 
+{
+	display: flex;
+	min-height: 100%;
+	margin: 0;
+  	justify-content: center;
+}
+
+body 
+{
+	font-family: "DM Mono";
+	color: #9d9c9a;
+}
+
+.button 
+{
+	display: inline-block;
+	text-transform: uppercase;
+	font-weight: bold;
+	background-color: #dde2e3;
+	transition: 0.3s;
+	padding: 10px;
+}
+
+.button:hover 
+{
+	background-color: #d1d9dc;
+}
+
+.blog-container 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 80ch;
+	height: 100%;
+	flex-wrap: nowrap;
+	margin: 0px 40px 0px 40px;
+}
+
+a 
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+/* navbar */
+
+nav 
+{
+	display: flex;
+	justify-content: space-around;
+	width: 400px;
+	height: 150px;
+	align-items: center;
+}
+
+.navbar-item 
+{
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100px;
+	cursor: pointer;
+	transition: 0.3s;
+	font-weight:bold;
+	border-top: 1px solid #9d9c9a;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-weight: bold
+}
+
+.navbar-item:hover 
+{
+	border-top: 1px solid #72747a;
+	color: #72747a;
+}
+
+/* content */
+
+.content 
+{
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+}
+
+.article-header 
+{
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+}
+
+.article-content {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.article-content p 
+{
+	text-align: justify;
+}
+
+.article-card-header 
+{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.article-card-content 
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	display: -webkit-box;
+    	max-width: 100%;
+    	-webkit-line-clamp: 3;
+    	-webkit-box-orient: vertical;
+    	overflow: hidden;
+    	text-overflow: ellipsis;
+}
+
+
+/* footer */
+
+footer 
+{
+	display: flex;
+	height: 150px;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}

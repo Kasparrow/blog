@@ -1,0 +1,92 @@
+@font-face {
+	font-family: "DM Mono";
+	src: url("./DMMono-Light.ttf");
+}
+
+body {
+  	display: flex;
+  	justify-content: center;
+	font-family: "DM Mono";
+	color: #72747a;
+	padding: 40px;
+	background-color: #dde2e3;
+}
+
+.blog-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 80ch;
+   height: 100%;
+   flex-wrap: nowrap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: flex;
+  width:400px;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.navbar-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight:bold;
+  border-top: 1px solid #72747a;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-weight: bold
+}
+
+.navbar-item:hover {
+    border-top: 1px solid black;
+    color: black;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+footer {
+	display: flex;
+	height: 100px;
+	align-items: center;
+	justify-content: center;
+}
+
+.article .header {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  height: 100px;
+  align-items: center;
+  display: flex;
+}
+
+.article p {
+  text-align: justify;
+}
+
+.button {
+  background-color: #d1d9dc;
+  transition: 0.3s;
+  padding: 10px;
+}
+
+.button:hover {
+  background-color: #c4d0d9;
+}
