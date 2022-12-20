@@ -1,7 +1,7 @@
 @font-face 
 {
 	font-family: "DM Mono";
-	src: url("./DMMono-Light.ttf");
+	src: url("../fonts/DMMono-Light.ttf");
 }
 
 html, body 
@@ -9,7 +9,7 @@ html, body
 	display: flex;
 	min-height: 100%;
 	margin: 0;
-  	justify-content: center;
+  justify-content: center;
 }
 
 body 
@@ -50,6 +50,12 @@ a
 	color: inherit;
 }
 
+.content a:hover
+{
+	color: #72747a;
+  text-decoration: underline;
+}
+
 /* navbar */
 
 nav 
@@ -74,13 +80,15 @@ nav
 	border-top: 1px solid #9d9c9a;
 	text-transform: uppercase;
 	font-weight: normal;
-	font-weight: bold
+	font-weight: bold;
+  text-decoration: none;
 }
 
 .navbar-item:hover 
 {
 	border-top: 1px solid #72747a;
 	color: #72747a;
+  text-decoration: none!important;
 }
 
 /* content */
@@ -97,8 +105,6 @@ nav
 	font-size: 15px;
 	text-transform: uppercase;
 	font-weight: bold;
-	display: flex;
-	justify-content: center;
 }
 
 .article-content {
@@ -106,9 +112,21 @@ nav
 	margin-bottom: 50px;
 }
 
+.content p 
+{
+	text-align: justify;
+}
+
 .article-content p 
 {
 	text-align: justify;
+}
+
+.article-content img
+{
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .article-card-header 
@@ -127,6 +145,16 @@ nav
     	-webkit-box-orient: vertical;
     	overflow: hidden;
     	text-overflow: ellipsis;
+	text-align: justify;
+}
+
+.article-footer 
+{
+	font-size: 15px;
+	text-transform: uppercase;
+	font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -139,4 +167,15 @@ footer
 	align-items: center;
 	justify-content: center;
 	font-weight: bold;
+}
+
+pre
+{
+  background-color: #EEEEEE;
+  width: 100%
+}
+
+code
+{
+  color: #000000;
 }
