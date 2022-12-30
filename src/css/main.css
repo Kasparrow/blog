@@ -15,7 +15,7 @@ html, body
 body 
 {
 	font-family: "DM Mono";
-	color: #9d9c9a;
+	color: #606060;
 }
 
 .button 
@@ -48,11 +48,17 @@ a
 {
 	text-decoration: none;
 	color: inherit;
+  transition: 0.3s;
+}
+
+.article-content a
+{
+  text-decoration: underline;
 }
 
 .content a:hover
 {
-	color: #72747a;
+	color: #000000;
   text-decoration: underline;
 }
 
@@ -86,8 +92,8 @@ nav
 
 .navbar-item:hover 
 {
-	border-top: 1px solid #72747a;
-	color: #72747a;
+	border-top: 1px solid #000000;
+	color: #000000;
   text-decoration: none!important;
 }
 

@@ -1,0 +1,618 @@
+Remords d'un mage ocre et anar
+30/12/2022
+<p>
+  Si vous avez surfé sur la toile française dans les années 2000, vous avez surement entendu parler des sagas MP3.
+  Ces oeuvres de fiction audio produites par des amateurs et diffusées gratuitement (généralement sur 
+  <a href="https://forum.netophonix.com/" target="_blank">Netophonix</a>) ont fait vibrer des miliers d'internautes, votre serviteur y compris. 
+  Mis à part la réalisation d'<a href="https://wiki.netophonix.com/Saga_champignon" target="_blank">une saga champignon</a>
+  à la qualité sonore discutable, aux dialogues convenus et étonnament 
+  <a href="http://www.mediafire.com/?fij6ls4mk2z2ntj" target="_blank">toujours accessible</a> sur un obscur hébergeur 
+  (si vous cliquez, gardez vous de me juger : j'étais jeune), ma connaissance sur le sujet se limite aux grands 
+  classiques du genre : <a href="http://www.penofchaos.com/warham/donjon.htm" target="_blank">le Donjon de Naheulbeuk</a>, 
+  <a href="https://www.knarfworld.net/" target="_blank">les Aventuriers du Survivaure</a> et surtout : 
+  <a href="https://www.refletsdacide.com/" target="_blank"> Reflets d'Acide</a>. À la simple mention de ce titre, les initiés 
+  commencent à comprendre ce qui se cache derrière le titre énigmatique de ce billet tandis que les profanes se demandent encore 
+  quel est le rapport avec la choucroute.
+</p>
+
+<p>
+  Si vous aimez les jeux de rôles papier, la langue française, l'humour graveleux, voire les trois à la fois, et que 
+  vous n'avez jamais posé les oreilles sur le bijou que représente cette saga, je vous enjoint à arrêter immédiatement 
+  la lecture de cet article et à aller écouter le premier épisode. Nul besoin de vous inviter à écouter le reste, si
+  c'est votre came vous n'arriverez pas à décrocher de toute façon. La principale force de Reflets d'Acide réside dans
+  la qualité de son écriture. Plus les épisodes passent, plus on prend conscience de l'amour de JBX pour notre langue :
+  allitérations, assonances, anagrammes, contrepètrie, alexandrins, références à la littérature, le tout au service 
+  d'un humour dévastateur et d'une histoire passionante. C'est bien simple : 15 ans après, je prends toujours autant
+  de plaisir à me refaire l'intégrale, avec une mention spéciale pour l'épisode 4 qui, malgré sa simplicité (comparé aux
+  derniers épisodes de la saison 1) reste de loin mon préféré.
+</p>
+
+<p>
+  Comme vous pouvez l'imaginer, réaliser un épisode de saga MP3 n'est pas une tâche aisée. Il faut d'abord rédiger le 
+  scénario, puis enregistrer les voix avant de mixer le tout. Chacune de ces étapes peut prendre un temps considérable 
+  en fonction de du degré de perfectionisme du (ou des) réalisateur(s) et de la durée de l'épisode. Précisons également 
+  que dans l'immense majorité des cas, il s'agit d'un travail bénévole et que les créateurs ont un travail et une vie de 
+  famille à côté. L'attente entre deux épisodes peut donc être longue. Dans le cas de Reflets d'Acide, elle est 
+  devenue légendaire, JBX travaillant seul à l'écriture et au mixage, et quasiment seul à l'enregistrement des voix à 
+  quelques exceptions près. De plus les derniers épisodes diffusés, duraient entre 1 et 2 heures. Vous ne serez donc pas 
+  surpris d'apprendre qu'il a fallut attendre 5 ans après la sortie de l'épisode 15 pour connaître le dénouement de
+  l'histoire, en 2017. Cinq and plus tard, Reflets d'Acide est de retour et le premier épisode de la saison 2 sera 
+  diffusé ce soir sur Twitch (enfin... si je sors cet article dans les temps !). Comme à chaque sortie depuis l'épisode 
+  11, un petit jeu concocté par JBX a précédé sa diffusion et a permis à quelques heureux de découvrir l'épisode en 
+  avant-première. Et au bout de 3 paragraphes d'introduction, nous allons enfin pouvoir aborder le sujet de cet article.
+</p>
+
+<p>
+  Après tout ce que nous avons vu sur cette saga et son auteur, il parait évident que ce concours n'a rien
+  d'un vulgaire tirage au sort. Pour accéder au Graal, il faut jouer avec les mots ! Le principe est somme toute
+  assez simple : le scénario de l'épisode est divisé en 12 chapitres. Dans les jours précédents la sortie l'épisode, 
+  JBX a posté un anagramme qui, une fois décodé, révelait le titre d'un de ces chapitre (au passage, on notera que 
+  chacun d'entre eux était un alexandrin, parce que pourquoi pas). Une fois les 12 chapitres découverts, il suffisait de prendre les 
+  acrostiches de début et de fin de vers et de les associer à l'anagramme d'un mot secret pour obtenir le titre de 
+  l'épisode. Facile non ?
+</p>
+
+<p>
+  Non.
+</p>
+
+<p>
+  Bon mettons les choses au clair, je ne suis pas doué avec les anagrammes, et à chaque sortie d'épisode j'ai vainement
+  tenté de résoudre ne serait-ce qu'une des ces énigmes tordues, gaspillant des flots d'encre en ratures et de salive en
+  jurons. Aussi, quand JBX a annoncé début Décembre le retour du bien nommé "Jeu tordu", je me suis juré que l'heure 
+  de la revanche avait sonnée. J'étais certes toujours incapable de trouver la solution par moi même, mais j'étais à 
+  peu près certain de pouvoir écrire un programme qui le ferait à ma place !
+</p>
+
+<p>
+  Avant de foncer tête baissée, faisons d'abord un petit récapitulatif des règles du jeu
+  <ul>
+    <li>L'anagramme est séparé en deux hémistiches de 6 pieds</li>
+    <li>Pour chaque hémistiche, on connait
+      <ul>
+        <li>Le nombre de mots
+        <li>Le nombre de lettres par mot</li>
+        <li>La position de tous les accents</li>
+      </ul>
+  </ul>
+  À titre d'exemple, regardons la solution du premier chapitre 
+  <ul>
+    <li>Les anagrammes sont "banalement pauvre" et "minoration pudeurs"</li>
+    <li>Les indices sont "**é****** **e****" et "*****i* i*********"</li>
+    <li>Les solutions sont "Préambule avenant" et "Soudain interompu"
+  </ul>
+
+  Ensuite définissons les attentes du programme
+  <ul>
+    <li>Le programme doit prendre en entrée un anagramme et un indice</li>
+    <li>Le programme doit retourner tous les anagrammes valides</li>
+    <li>Si plusieurs anagrammes sont valides, je dois pouvoir filtrer rapidement les résultats, pour trouver la
+    bonne solution manuellement</li>
+    <li>Le programme doit avoir un temps d'exécution raisonnable (quelques minutes maximum)</li>
+  </ul>
+  Sachant ceci, nous pouvons commencer !
+</p>
+
+<p>
+  La première idée qui me vient en tête sachant que nous connaissons la position des espaces est de calculer 
+  toutes les permutations possibles, et de garder celles qui ne contiennent que des mots français et qui ont un
+  sens. C'est une solution assez simple à mettre en place, mais le nombre de permutations est bien trop grand pour
+  pouvoir toutes les calculer et les filtrer ensuite. En effet, si on reprend le premier hémistiche de l'exemple
+  ci-dessus, nous avons 11 lettres à placer pour 14 emplacements disponibles (la lettre 'a' est répétée 3 fois, la lettre
+  'n' 2 fois, et nous connaissons déjà l'emplacement de 2 des 3 'e'). Si mes souvenirs de lycée sont bons, nous avons
+  donc (14! / 3!2!) (soit 7 264 857 600) permutations possibles. Il va falloit être plus intelligent que ca !
+</p>
+
+<p>
+  Une deuxième approche un peu moins brutale consiste à trouver la liste des mots français contenant uniquement les
+  lettres de l'anagramme (sans tenir compte du nombre d'occurences) et de construire la liste des combinaisons possibles.
+  La première chose à faire est de trouver un fichier contenant tous les mots de la langue française (dont les verbes 
+  conjugués) avec idéalement un mot par ligne et d'utiliser grep afin de filtrer ceux qui m'intéressent. Quelques 
+  recherches plus tard, je <a href="https://www.pallier.org/liste-de-mots-francais.html">trouve mon bonheur</a>. 
+  Le fichier contient 336 531 mots. À titre de comparaison, l'édition du Petit Robert 2023 sur mon bureau se targue de 
+  contenir "300 000 mots et sens", je suis donc assez confiant quand à son exhaustivité, mais je suis un peu inquiet du
+  temps nécessaire pour filtrer tous les résultats. Je décide donc de faire un premier test (assez arbitraire) en 
+  calculant le temps nécessaire pour retourner le nombre des mots d'exactement 4 lettres.
+<pre>
+<code>
+[kasparrow@munin rda]$ time grep -E "^.{4}\\s+$" dictionnaire | wc -l<br/>
+2064<br/>
+
+real    0m0.357s<br/>
+user    0m0.353s<br/>
+sys     0m0.004s<br/>
+</code>
+</pre>
+  Le résultat est plutôt satisfaisant, il faut un peu plus 300 milisecondes pour retourner l'intégralité des 
+  2 064 mots de 4 lettres du fichier. Si les lignes ci-dessus vous semblent incompréhensibles, pas de panique voici 
+  une petite explication : 
+  <ul>
+    <li>time : programme qui va calculer le temps d'exécution d'un autre programme. C'est lui qui affiche les 
+      3 dernières lignes</li>
+    <li> grep : un programme qui permet de chercher du texte dans un fichier. Le paramètre -E indique qu'il va 
+      devoir chercher des expressions régulières utilisant la syntaxe étendue.
+      <ul>
+        <li>Pour faire simple, une expression régulière est une suite de caractères qui permet de décrire d'autres
+        suites de caractères (j'admet que cela peut paraitre un peu déroutant à première vue, mais tout devrait 
+        s'éclaircir en lisant le point suivant)</li>
+      </ul>
+    </li>
+    <li>"^.{4}\\s$" : notre expression régulière mesdames et messieurs !
+      <ul>
+        <li>Le ^ indique que la ligne recherchée doit commencer par ce qui va être décrit dans la suite de 
+          l'expression</li>
+        <li>Le . est un joker qu'on peut traduire par "N'importe quel caractère, hormis les caractères d'espacement (espace, 
+        tabulation, etc)"</li>
+        <li>Le {4} indique que le caractère précédent doit apparaitre exactement 4 fois</li>
+        <li>\\s décrit l'ensemble des caractères d'espacement. J'avoue ne pas savoir pourquoi j'ai du le rajouter, 
+          mais sans celui ci, la recherche ne retourne rien.</li>
+        <li>Le $ indique que la ligne recherchée doit terminer par ce qui a été décrit précedemment</li>
+        <li>Si l'on combine le tout, on recherche donc les lignes qui commencent et se terminent par exactement 4
+          caractères suivis par 1 caractères d'espacement... Un mot de 4 lettres quoi !</li>
+      </ul>
+    </li>
+    <li> dictionnaire : le nom du fichier contenant mes mots et dans lequel grep va chercher l'expression régulière</li>
+    <li>| : Indique que le resultat de grep va etre utilisé en entrée dans le programme suivant</li>
+    <li>wc -l : wc est un programme qui compte les mots, le paramètre -l change son comportement pour qu'il compte les
+      lignes. C'est lui qui affiche le 2064.</li>
+  </ul>
+  Vous admettrez que c'est quand même beau de pouvoir exprimer tant de choses en si peu de caractères !
+</p>
+
+<p>
+  Bon c'est bien joli me direz vous, mais ce n'est pas l'ensemble des mots de 4 lettres qui nous intéresse, et vous
+  avez tout à fait raison. Mais il se trouve qu'il est assez facile de retrouver les mots d'une taille donnée qui
+  utilisent uniquement les lettres de notre anagramme grâce à une expression régulière. Dans l'exemple ci-dessus, nous
+  avons utilisé le joker '.' pour décrire n'importe quel caractère. Toutefois il est possible de décrire un ensemble 
+  restreint de lettres avec la syntaxe []. Ainsi [abc] indique que le caractère doit être un a, un b, ou un c. Il me 
+  suffit donc de récupérer la liste des lettres utilisées dans notre anagramme pour construire l'expression régulière souhaitée. Voyez plutôt :
+</p>
+<pre>
+<code>
+def get_unique_chars(phrase)<br/>
+  %x|echo #{phrase} \\| grep -o -E '[[:alnum:]]' \\| sort -u \\| tr -d '\\n'|<br/>
+end<br/>
+</code>
+</pre>
+<p>
+  Hé hé hé... Bon, bon, bon... Voilà, voilà, voilà... Oui, bon, j'admet c'est totalement débile de passer par des 
+  commandes du shell pour faire ca ! Mais que voulez-vous, j'ai commencé à écrire mon programme dans un script bash 
+  et je me suis rendu compte que c'était une idée à la con au moment où il a fallut écrire une fonction récursive et 
+  j'avais la flemme de tout ré-écrire d'autant que :
+  <ul>
+    <li>Ca marche</li>
+    <li>On parle d'un bout de code qui aura servi 12 jours</li>
+  </ul>
+  Pour résumer voici ce que fait cette ligne
+  <ul>
+    <li>echo va afficher la phrase passée en paramètre</li>
+    <li>grep -o -E '[[:alnum:]]' va afficher les lettres / chiffres de la phrase (sauf les espaces) ligne par ligne</li>
+    <li>sort -u va supprimer les doublons (et accessoirement ordonner les caractères)</li>
+    <li>tr -d '\\n' va remettre tous les caractères sur la meme ligne</li>
+  </ul>
+  Si j'appelle cette fonction avec la chaîne de caractères "banalement pauvre", j'obtiens le résultat "abelmnprtuv". 
+  Il ne me reste plus qu'à ajouter des crochets autour et j'obtiens une expression régulière qui décrit "un caractère 
+  parmis ceux de mon anagramme". On notera qu'on peut se permettre d'ignorer les caractères accentués dans notre 
+  expression régulière car nous connaissons déjà leur position. Il désormais facilement construire une expression 
+  régulière qui représente un des mot que je cherche :
+</p>
+<pre>
+<code>
+hint="**é******"<br/>
+pattern="[#{get_unique_chars("banalement pauvre)}]"<br/>
+regex="^#{hint.gsub('*', pattern)}\\s$"<br/>
+</code>
+</pre>
+<p>
+  Tada : "^[abelmnprtuv][abelmnprtuv]é[abelmnprtuv][abelmnprtuv][abelmnprtuv][abelmnprtuv][abelmnprtuv][abelmnprtuv]\\s$" !
+  Bon ce n'est probablement pas le plus belle expression régulière que vous verrez de votre vie mais elle fait le
+  boulot, la preuve voici ce que nous retourne grep lorsqu'on l'utilise pour filtrer notre dictionnaire :
+<pre>
+<code>
+préalable<br/>
+préambule<br/>
+préempter<br/>
+prélature<br/>
+prélevant<br/>
+prénatale<br/>
+préparant<br/>
+préparent<br/>
+préparera<br/>
+prévalant<br/>
+prévalent<br/>
+prévenant<br/>
+trématant<br/>
+trématent<br/>
+trématera<br/>
+trémulant<br/>
+trémulent<br/>
+trémulera<br/>
+trépanant<br/>
+trépanent<br/>
+trépanera<br/>
+</code>
+</pre>
+
+<p>
+  Ce qui nous donne 21 résultats en (accrochez vous)... 12 milisecondes. En répétant cette opération avec notre 
+  deuxième indice, on obtient 19 résultats. Le nombre de combinaisons possible est donc égal à 21 * 19 soit 399. 
+  Pas mal comparé au plus de 7 miliards de permutations de notre première solution. Il y a cependant deux 
+  problèmes : premièrement, le processus n'est pas totalement automatisé et deuxièmement, certaines des combinaisons 
+  ne sont pas valides car on utilise certaines lettres  plus souvent qu'elles ne sont disponibles. Par 
+  exemple toutes les combinaisons avec trépanant peuvent être ignorées car la lettre 't' n'est utilisable qu'une seule 
+  fois dans notre anagramme. Corrigeons tout cela !
+</p>
+
+<p>
+  Première étape : écrire une fonction qui se chargera de parcourir la liste d'indices et de calculer les combinaisons
+  possible (mais pas nécessairement valides). Nous allons procéder de manière récursive :
+</p>
+
+<pre>
+<code>
+def compute_anagrams(unique_chars, hints, solution)</br>
+  if hints.empty? then</br>
+      puts "#{solution}\\n"</br>
+      return</br>
+  end</br>
+</br>
+  hint = hints.shift</br>
+</br>
+  pattern="[#{unique_chars}]"</br>
+  regex="^#{hint.gsub('*', pattern)}\\s$"</br>
+  matching_words = %x|grep -E "#{regex}" ./dictionnaire|.split</br>
+</br>
+  matching_words.each do |word|</br>
+    compute_anagrams(unique_chars, hints.clone, "#{solution} #{word}")</br>
+  end</br>
+end</br>
+<br/>
+compute_anagrams(get_unique_chars('banalement pauvre'), ['**é******', '**e****'], '')<br/>
+</code>
+</pre>
+
+<p>
+  Ah l'élégance de la récursivité... Commencons par regarder les paramètres de notre fonction : 
+  <ul>
+    <li>unique_chars : la liste des lettres utilisées dans notre anagramme</li>
+    <li>hints : un tableau contenant les indices de notre anagramme</li>
+    <li>solution : la solution de notre anagramme</li>
+  </ul>
+  Jusque la, rien de bien sorcier. Par habitude, lorsque j'écris une fonction récursive, je commence toujours par la 
+  condition de sortie. Ici, elle est assez évidente : si je n'ai plus d'indices, alors je n'ai plus rien à deviner
+  il est donc temps d'afficher la solution. Dans le cas contraire, je récupère le premier indice du tableau et je le
+  stocke dans la variable hint. On retrouve ensuite le code que nous avons détaillé précédemment qui permet filtrer
+  le dictionnaire pour garder les mots de même taille utilisant uniquement les lettres de notre anagramme. La petite
+  nouveauté est la boucle sur la variable matching_words. Ici, pour chaque mot qui a été retourné par grep, nous allons
+  exécuter récursivement la fonction compute_anagrams avec les paramètres suivants :
+  <ul>
+    <li>unique_chars: ce paramètre est inchangé</li>
+    <li>hints: Ici nous utilisons le tableau privé de son premier élément (puisque nous avons shift quelques lignes plus
+      haut)</li>
+    <li>solution: Ici solution est la concaténation de la solution passée précédement + un mot qui a été retourné par
+      grep</li>
+  </ul>
+  Visuellement voici ce qui va se passer :
+</p>
+
+<pre>
+<code>
+compute_anagrams(get_unique_chars('banalement pauvre'), ['**é******', '**e****'], '')<br/>
+  compute_anagrams("abelmnprtuv", ['**e****'], 'préalable')<br/>
+    compute_anagrams("abelmnprtuv", [], 'préalable aberrer')<br/>
+      affiche 'préalable aberrer'<br/>
+    compute_anagrams("abelmnprtuv", [], 'préalable alerter')<br/>
+      affiche 'préalable alerter'<br/>
+    # ... et ainsi de suite jusqu'a avoir épuisé les 19 mots possible le dernier étant tremper</br>
+  # on a fini les combinaisons possibles avec préablable, on passe donc à 'préambule'<br/>
+  compute_anagrams("abelmnprtuv", ['**e****'], 'préambule')<br/>
+    compute_anagrams("abelmnprtuv", [], 'préambule aberrer')<br/>
+      affiche 'préambule aberrer'<br/>
+    # ... et c'est reparti pour un tour<br/>
+  # et ainsi de suite jusqu'à avoir épuisé les 21 mots possibles
+</code>
+</pre>
+
+<p>
+  Logiquement, si on exécute le programme en l'état et qu'on passe son résultat à wc on devrait trouver 399.
+</p>
+
+<pre>
+<code>
+[kasparrow@munin rda]$ time ./rda.rb "BANALEMENT PAUVRE" "**é****** **e****" | wc -l<br/>
+399<br/>
+<br/>
+real    0m0.438s<br/>
+user    0m0.366s<br/>
+sys     0m0.074s<br/>
+</code>
+</pre>
+
+<p>
+ Bingo ! Il ne nous reste plus qu'une étape : supprimer les combinaisons invalides. Pour cela, le plus simple serait
+ de créer une structure de données qui stockerait les lettres et leurs nombre d'occurences dans l'anagramme de départ.
+ Ensuite, à chaque fois que l'on ajoute un mot dans la variable solution, on pourrait retrancher les lettres utilisées
+ et mettre à jour l'expression régulière qui représente les lettres utilisables. Commencons par ajouter quelques 
+ fonctions utilitaires. Ces dernières sont assez simples, je ne rentrerais donc pas trop dans le détail, mais vous 
+ trouverez un exemple d'utilisation pour chacune d'entres elles.
+</p>
+
+<pre>
+<code>
+def get_char_occurences(phrase)<br/>
+  uniques_chars = get_unique_chars(phrase).split('')<br/>
+  occurences = {}<br/>
+  uniques_chars.each do |char|<br/>
+    occurences[char] = phrase.count(char)<br/>
+  end<br/>
+<br/>
+  occurences<br/>
+end<br/>
+<br/>
+get_char_occurences("BANALEMENT PAUVRE")<br/>
+{"A"=>3, "B"=>1, "E"=>3, "L"=>1, "M"=>1, "N"=>2, "P"=>1, "R"=>1, "T"=>1, "U"=>1, "V"=>1}<br/>
+</pre>
+</code>
+
+<p>
+  Retourne un dictionnaire où les clés sont les lettres et les valeurs le nombre d'occurence de cette lettre dans
+  la phrase passée en paramètre.
+</p>
+
+<pre>
+<code>
+def get_remaining_occurences(initial_occurences, used_occurences)<br/>
+  remaining_occurences = initial_occurences.clone<br/>
+<br/>
+  used_occurences.each do |key, value|<br/>
+    remaining_occurences[key] = initial_occurences[key] - used_occurences[key]<br/>
+  end<br/>
+<br/>
+  remaining_occurences<br/>
+end<br/>
+<br/>
+initial_occurences = get_char_occurences("BANALEMENT PAUVRE")<br/>
+used_occurences = get_char_occurences("PREAMBULE")<br/>
+get_remaining_occurences(initial_occurences, used_occurences)<br/>
+{"A"=>2, "B"=>0, "E"=>1, "L"=>0, "M"=>0, "N"=>2, "P"=>0, "R"=>0, "T"=>1, "U"=>0, "V"=>1}
+</code>
+</pre>
+
+<p>
+  Retranche les occurences de l'objet used_occurences de l'object initial_occurences.
+</p>
+
+<pre>
+<code>
+def valid_remaining_occurences?(occurences)<br/>
+  not occurences.any? { |_, value|  value < 0 }<br/>
+end<br/>
+<br/>
+initial_occurences = get_char_occurences("BANALEMENT PAUVRE")<br/>
+used_occurences = get_char_occurences("PREAMBULE")<br/>
+remaining_occurences = get_remaining_occurences(initial_occurences, used_occurences)<br/>
+valid_remaining_occurences(remaining_occurences)
+true
+</code>
+</pre>
+
+<p>
+  Vérifie que nous n'avons pas utilisé une lettre plus que nécessaire.
+</p>
+
+<pre>
+<code>
+def get_remaining_chars(occurences)<br/>
+  remaining_chars = ""<br/>
+  occurences.each do |key, value|<br/>
+    remaining_chars += key if value > 0<br/>
+  end<br/>
+<br/>
+  remaining_chars<br/>
+end<br/>
+<br/>
+initial_occurences = get_char_occurences("BANALEMENT PAUVRE")<br/>
+used_occurences = get_char_occurences("PREAMBULE")<br/>
+remaining_occurences = get_remaining_occurences(initial_occurences, used_occurences)<br/>
+get_remaining_chars(remaining_occurences)
+AENTV
+</code>
+</pre>
+
+<p>
+  Retourne les lettres utilisables dont le nombre d'occurence est supérieur à 0
+</p>
+
+<p>
+  Cette fois tout est prêt ! Voici le code final :
+</p>
+
+<pre>
+<code>
+#!/usr/bin/env ruby<br/>
+<br/>
+require 'active_support/inflector'<br/>
+<br/>
+words = ARGV[0].downcase<br/>
+hints = ARGV[1].split<br/>
+<br/>
+def get_unique_chars(phrase)<br/>
+  %x|echo #{phrase} \| grep -o -E '[[:alnum:]]' \| sort -u \| tr -d '\\n'|<br/>
+end<br/>
+<br/>
+def get_char_occurences(phrase)<br/>
+  uniques_chars = get_unique_chars(phrase).split('')<br/>
+  occurences = {}<br/>
+  uniques_chars.each do |char|<br/>
+    occurences[char] = phrase.count(char)<br/>
+  end<br/>
+<br/>
+  occurences<br/>
+end<br/>
+<br/>
+def get_remaining_occurences(initial_occurences, used_occurences)<br/>
+  remaining_occurences = initial_occurences.clone<br/>
+<br/>
+  used_occurences.each do |key, value|<br/>
+    remaining_occurences[key] = initial_occurences[key] - used_occurences[key]<br/>
+  end<br/>
+<br/>
+  remaining_occurences<br/>
+end<br/>
+<br/>
+def valid_remaining_occurences?(occurences)<br/>
+  not occurences.any? { |_, value|  value < 0 }<br/>
+end<br/>
+<br/>
+def get_remaining_chars(occurences)<br/>
+  remaining_chars = ""<br/>
+  occurences.each do |key, value|<br/>
+    remaining_chars += key if value > 0<br/>
+  end<br/>
+<br/>
+  remaining_chars<br/>
+end<br/>
+<br/>
+def compute_anagrams(initial_occurences, hints, solution)<br/>
+  if not valid_remaining_occurences?(initial_occurences)<br/>
+    return<br/>
+  end<br/>
+<br/>
+  if hints.empty? then<br/>
+      puts "#{solution}\\n"<br/>
+      return<br/>
+  end<br/>
+<br/>
+  hint = hints.shift<br/>
+<br/>
+  pattern="[#{get_remaining_chars(initial_occurences)}]"<br/>
+  regex="^#{hint.gsub('*', pattern)}\\s$"<br/>
+  matching_words = %x|grep -E "#{regex}" ./dictionnaire|.split<br/>
+<br/>
+  matching_words.each do |word|<br/>
+    used_occurences = get_char_occurences(word.parameterize)<br/>
+    remaining_occurences = get_remaining_occurences(initial_occurences, used_occurences)<br/>
+    compute_anagrams(remaining_occurences, hints.clone, "#{solution} #{word}")<br/>
+  end<br/>
+end<br/>
+<br/>
+compute_anagrams(get_char_occurences(words), hints, "")<br/>
+</code>
+</pre>
+
+<p>
+  Pfiouh ! C'est terminé ! Concrètement il n'y a pas énormément de changements par rapport à la version précédente. On notera que :
+  <ul>
+    <li>On a ajouté une autre condition de sortie à la fonction compute_anagrams : si le nombre d'occurences n'est plus valide (le dernier mot que l'on 
+      a ajouté à la solution utilise une lettre plus souvent qu'il ne le peut)</li>
+    <li>On a remplacé la variable unique_occurence (qui contenait toutes les lettres de l'anagramme) par une structure d'occurences qui est mise à 
+      jour dès qu'on ajoute un mot à la solution</li>
+  </ul>
+  Et maintenant l'instant de vérité : est ce que ca marche ? Eh bien dans la plupart des cas, c'est plutôt efficace :
+</p>
+
+<pre>
+<code>
+[kasparrow@munin rda]$ time ./rda.rb "BANALEMENT PAUVRE" "**é****** **e****"<br/>
+ préambule avenant<br/>
+<br/>
+real    0m0.360s<br/>
+user    0m0.333s<br/>
+sys     0m0.076s<br/>
+[kasparrow@munin rda]$ time ./rda.rb "MINORATION PUDEURS" "*****i* i*********"<br/>
+ soudain importuner<br/>
+ soudain interrompu<br/>
+<br/>
+real    0m9.564s<br/>
+user    0m9.299s<br/>
+sys     0m2.934s<br/>
+[kasparrow@munin rda]$ time ./rda.rb "REDEMPTEUR MUTUELLES" "***u**** *e *  *****e**"<br/>
+ tumultes de l empereur<br/>
+ tumultes le d empereur<br/>
+<br/>
+real    0m5.461s<br/>
+user    0m5.109s<br/>
+sys     0m0.878s<br/>
+[kasparrow@munin rda]$ time ./rda.rb "HAPTIQUES AMOCHEE" "****a** **a**i***"<br/>
+ emphase chaotique<br/>
+<br/>
+real    0m1.591s<br/>
+user    0m1.504s<br/>
+sys     0m0.404s<br/>
+</code>
+</pre>
+
+<p>
+  Encore une fois... Plus de 7 000 000 000 de permutations mais dans certains cas l'algorithme retourne la bonne en moins d'une seconde ! Toutefois, il
+  arrive que ce soit plus long (généralement quand il y a de nombreux mots courts dans la solution car il existe beaucoup de combinaisons valides).
+</p>
+
+<pre>
+<code>
+[kasparrow@munin rda]$ time ./rda.rb "PASSAGERES NORMALES" "*****é *a* *** *o****" | wc -l<br/>
+216<br/>
+<br/>
+real    1m51.372s<br/>
+user    1m47.371s<br/>
+sys     0m33.139s<br/>
+</code>
+</pre>
+
+<p>
+  Cependant on reste dans le domaine du raisonnable et en parcourant la liste de solutions il est assez facile de deviner quels mots sont les plus 
+  susceptibles de se trouver dans la solution. On peut affiner la recherche de la manière suivante :
+</p>
+
+<pre>
+<code>
+[kasparrow@munin rda]$ time ./rda.rb "PASSAGERES NORMALES" "*****é *a* *** songes"<br/>
+alarmé par ses songes<br/>
+alarmé ras sep songes<br/>
+amarré las sep songes<br/>
+amarré pal ses songes<br/>
+amarré pas les songes<br/>
+amarré pas sel songes<br/>
+empalé ras ars songes<br/>
+empalé ras ras songes<br/>
+emparé las ars songes<br/>
+emparé las ras songes<br/>
+emparé ras las songes<br/>
+pressé mal ara songes<br/>
+<br/>
+real    0m57.852s<br/>
+user    0m54.135s<br/>
+sys     0m15.104s<br/>
+</code>
+</pre>
+
+<p>
+  Et enfin par deux fois l'algorithme... N'a rien retourné ! Dans ces cas la, c'est un peu plus compliqué car celà veut dire que le dictionnaire
+  ne contient pas un des mots de la solution. La encore, on peut essayer d'affiner la recherche comme vu ci-dessus et deviner le mot manquant. La 
+  première fois ce fut assez simple (il fallait trouver le mot "elfique", l'anagramme m'a presque sauté aux yeux à partir des lettres
+  disponibles, mais j'ai eu beaucoup plus de mal avec le "palefrin" du 6ème anagramme). C'est peut-être quelque chose à prendre en compte pour les
+  prochaines éditions du jeu tordu (histoire de complexifier la vie de ces petits filous de développeurs) ? À noter que le dictionnaire trouvé en 
+  ligne ne fournit pas les "mots" d'une lettre (d', l', s') il est donc nécessaire de les ajouter à la main pour résoudre certains anagrammes.
+</p>
+
+<p>
+  Il se trouve que je n'étais pas devant mon ordinateur lors de la mise en ligne de la dernière énigme, je n'ai donc pas pu tenter ma chance pour 
+  écouter l'épisode en avant-première (celà dit même si ca avait été le cas, je pense que je me serai abstenu de participer car la récompense n'aurait 
+  pas vraiment été méritée), cependant c'est avec un certain plaisir que j'ai parfois réussi à répondre dans les premiers les jours précédents.
+</p>
+
+<p>
+  Pour conclure cet article, j'ajouterais qu'il me semblait de bon ton de créer un anagramme digne de ceux du Jeu Tordu en guise de titre pour ce 
+  billet, je me permets donc de vous laisser un indice pour résoudre celui-ci en guise de conclusion : "*é***** *n *n******* **t***". Bon courage (et
+  n'hésitez pas à m'envoyer un mail si vous pensez avoir trouvé la solution !).
+</p>
+
+<pre>
+<code>
+[kasparrow@munin]$ time ./rda.rb "REMORDS D UN MAGE OCRE ET ANAR" "*é***** *n *n******* **t***" | wc -l<br/>
+40<br/>
+<br/>
+real    4m2.518s<br/>
+user    3m59.100s<br/>
+sys     1m15.801s<br/>
+</code>
+</pre>
