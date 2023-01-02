@@ -17,7 +17,7 @@ Remords d'un mage ocre et anar
 
 <p>
   Si vous aimez les jeux de rôles papier, la langue française, l'humour graveleux, voire les trois à la fois, et que 
-  vous n'avez jamais posé les oreilles sur le bijou que représente cette saga, je vous enjoint à arrêter immédiatement 
+  vous n'avez jamais posé les oreilles sur le bijou que représente cette saga, je vous enjoins à arrêter immédiatement 
   la lecture de cet article et à aller écouter le premier épisode. Nul besoin de vous inviter à écouter le reste, si
   c'est votre came vous n'arriverez pas à décrocher de toute façon. La principale force de Reflets d'Acide réside dans
   la qualité de son écriture. Plus les épisodes passent, plus on prend conscience de l'amour de JBX pour notre langue :
@@ -30,7 +30,7 @@ Remords d'un mage ocre et anar
 <p>
   Comme vous pouvez l'imaginer, réaliser un épisode de saga MP3 n'est pas une tâche aisée. Il faut d'abord rédiger le 
   scénario, puis enregistrer les voix avant de mixer le tout. Chacune de ces étapes peut prendre un temps considérable 
-  en fonction de du degré de perfectionisme du (ou des) réalisateur(s) et de la durée de l'épisode. Précisons également 
+  en fonction du degré de perfectionisme du (ou des) réalisateur(s) et de la durée de l'épisode. Précisons également 
   que dans l'immense majorité des cas, il s'agit d'un travail bénévole et que les créateurs ont un travail et une vie de 
   famille à côté. L'attente entre deux épisodes peut donc être longue. Dans le cas de Reflets d'Acide, elle est 
   devenue légendaire, JBX travaillant seul à l'écriture et au mixage, et quasiment seul à l'enregistrement des voix à 
@@ -115,7 +115,7 @@ Remords d'un mage ocre et anar
   calculant le temps nécessaire pour retourner le nombre des mots d'exactement 4 lettres.
 <pre>
 <code>
-[kasparrow@munin rda]$ time grep -E "^.{4}\\s+$" dictionnaire | wc -l<br/>
+[kasparrow@munin rda]$ time grep -E "^.{4}\\s$" dictionnaire | wc -l<br/>
 2064<br/>
 
 real    0m0.357s<br/>
@@ -193,7 +193,7 @@ end<br/>
   Si j'appelle cette fonction avec la chaîne de caractères "banalement pauvre", j'obtiens le résultat "abelmnprtuv". 
   Il ne me reste plus qu'à ajouter des crochets autour et j'obtiens une expression régulière qui décrit "un caractère 
   parmis ceux de mon anagramme". On notera qu'on peut se permettre d'ignorer les caractères accentués dans notre 
-  expression régulière car nous connaissons déjà leur position. Il désormais facilement construire une expression 
+  expression régulière car nous connaissons déjà leur position. Il est désormais facile de construire une expression 
   régulière qui représente un des mot que je cherche :
 </p>
 <pre>
